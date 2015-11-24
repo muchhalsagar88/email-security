@@ -1,0 +1,29 @@
+Certificate Request:
+    Data:
+        Version: 0 (0x0)
+        Subject: C=US, ST=North Carolina, L=Raleigh, O=NCSU, OU=CNS, CN=lol/emailAddress=srmuchha@ncsu.edu
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:e1:ce:e6:78:2c:15:8a:cc:3f:2c:e0:69:98:5f:
+                    b1:3f:49:b4:72:46:49:67:5e:44:99:ea:7d:14:b3:
+                    eb:34:4b:ad:cd:35:63:8d:cc:ca:e4:7e:d4:03:3e:
+                    e6:f4:e0:35:33:00:3d:a4:eb:2f:ee:05:e9:00:a3:
+                    ad:fe:06:68:fc:12:50:f5:54:9c:b8:05:76:ba:c8:
+                    2c:76:ac:ff:51:e2:ea:85:cd:c7:67:19:c3:a1:3d:
+                    58:c2:c7:6c:54:6e:b8:b3:4c:c6:39:3d:8f:b3:fb:
+                    b7:a4:bc:8f:c8:0a:7f:fb:b6:4d:36:09:50:64:31:
+                    2a:bc:8c:8d:7b:81:1a:9d:23
+                Exponent: 65537 (0x10001)
+        Attributes:
+            a0:00
+    Signature Algorithm: sha256WithRSAEncryption
+         e1:3b:d2:22:90:0a:43:94:4b:6a:9f:20:5d:3e:c2:85:58:04:
+         b9:cb:04:dd:20:83:78:2e:e7:2f:fa:9e:27:81:b0:c7:ba:78:
+         e7:bd:79:b6:18:75:87:15:43:32:d2:bf:8f:86:62:fd:11:04:
+         87:9f:42:a0:73:15:a7:b6:8e:f8:7d:d9:6d:44:cd:01:ec:2f:
+         15:64:4c:0c:92:4d:8d:7a:8f:27:62:0a:f2:9c:6a:ea:46:5f:
+         c6:4e:18:c4:8c:54:b4:62:82:94:2d:48:16:f1:dd:bf:9c:76:
+         e5:42:48:23:52:02:8a:52:86:b7:7f:01:97:56:c4:85:a4:85:
+         47:bc
