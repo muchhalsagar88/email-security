@@ -242,9 +242,9 @@ def receive_mail(msg_file):
 	print email_from_cert
 
 	pub_key_file_name = get_public_key_from_cert(from_cert_name)
-	cmd = 'openssl dgst -sha1 -verify '+pub_key_file_name
-	cmd += ' -signature '
-	public.key -signature file.sig file
+	# cmd = 'openssl dgst -sha1 -verify '+pub_key_file_name
+	# cmd += ' -signature '
+	# public.key -signature file.sig file
 
 init_structures()
 print index
