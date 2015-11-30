@@ -8,3 +8,5 @@ openssl req -new -sha256 -key key.pem -out custom.csr # create a CSR
 openssl req -noout -text -in custom.csr > opt_csr.txt  # output CSR in text format
 openssl rsa -in key.pem -des3 -out enc-key.pem # password protect pem file (password: sagar)
 ```
+
+## Part 3 - Sending and receiving encrypted emails
