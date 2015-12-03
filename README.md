@@ -28,3 +28,17 @@ openssl rsa -in key.pem -des3 -out enc-key.pem
 ```
 
 ## Part 3 - Sending and receiving encrypted emails
+Below are the commands to list database, send email and receive emails. In the `part3` directory,
+
+To list the database,
+```
+python main.py --list
+```
+To send an encrypted email, run the below command. The resultant email message is stored in the file `email.txt`
+```
+python main.py --send <email-address>
+```
+To receive an encrypted mail, run the below command. The email address obtained from the certificate as well as the decoded message are displayed on the screen 
+```
+python main.py --receive <name_of_message_file>
+```
