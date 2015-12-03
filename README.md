@@ -1,4 +1,13 @@
-# CNS - EMail security
+# CNS - Email security
+
+## Part 1 - Break password by brute force method
+The code to break the password is in `break.py` file. Before running the Python script, run
+```
+pip install -r requirements.txt
+python break.py
+```
+The above script generates a .txt file which has the decoded message and the key used for decoding is appended to the name of the file.
+For instance, if `key` is the password, then the file having the decoded secret message is `file_key.txt`
 
 ## Part 2 - Generation of key pair and CSR
 ```
