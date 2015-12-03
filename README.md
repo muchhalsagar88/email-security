@@ -34,7 +34,7 @@ To list the database,
 ```
 python main.py --list
 ```
-To send an encrypted email, run the below command. The resultant email message is stored in the file `msg.bin`
+To send an encrypted email, run the below command. The resultant email message is stored in the file `email.txt`
 ```
 python main.py --send <email-address>
 ```
