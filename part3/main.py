@@ -83,15 +83,15 @@ def generate_random_key():
 	rand = ''.join(r.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(32))
 	return rand
 
-# Generates a file called msg.bin which has the following email content
+# Generates a file called email.txt which has the following email content
 def generate_email_msg():
 	line = "This email is intended for testing purposes only. This email is sent from srmuchha@ncsu.edu. The current timestamp is: "+str(datetime.now())
-	file_name = os.getcwd()+'/msg.bin'
+	file_name = os.getcwd()+'/email.txt'
 	with open(file_name, 'w') as fp:
 		fp.write(line)
 
 def create_n_save_encrypted_msg(key):
-	cmd = 'openssl enc -aes-256-cbc -base64 -in msg.bin -k '
+	cmd = 'openssl enc -aes-256-cbc -base64 -in email.txt -k '
 	cmd += key
 	
 	args = shlex.split(cmd)
@@ -150,11 +150,11 @@ def collate_msg(source, to, msg_file_name, enc_key_file_name):
 	with open(msg_file_name, 'r') as fp:
 		sign_msg += fp.read()
 	with open('sign_msg_file.bin', 'wb') as fp:
-		fp.write(sign_msg)
+		fp.write(sign_msg[:-1])
 
 	msg += sign_msg
 	msg += '\n'
-	with open('msg.bin', 'w') as fp:
+	with open('email.txt', 'w') as fp:
 		fp.write(msg)
 
 def calculate_hash(msg_file_name, personal_priv_key_file):
@@ -178,7 +178,7 @@ def complete_msg(message_file_name):
 		content = fp.read()
 	rest_of_msg = content + '\n'
 	rest_of_msg += '-----END CSC574 MESSAGE-----'
-	with open('msg.bin', 'a') as fp:
+	with open('email.txt', 'a') as fp:
 		fp.write(rest_of_msg)
 
 
@@ -189,7 +189,7 @@ def send_email(to):
 	session_key = generate_random_key()
 	generate_email_msg()
 	encrypted_txt = create_n_save_encrypted_msg(session_key)
-	with open('msg.bin', 'w') as fp:
+	with open('email.txt', 'w') as fp:
 		fp.write(encrypted_txt)
 
 	to_cert_name = get_certificate_for_key(to_unity_id)
@@ -198,14 +198,13 @@ def send_email(to):
 		raise Exception("Certificate not valid: "+to_cert_name)
 	pub_key_file_name = get_public_key_from_cert(to_cert_name)
 	encrypt_session_key(session_key, pub_key_file_name)
-	collate_msg(FROM_ADDRESS, to, 'msg.bin', 'encrypted_key.bin')
-	complete_msg('msg.bin')
-	with open('msg.bin', 'r') as fp:
+	collate_msg(FROM_ADDRESS, to, 'email.txt', 'encrypted_key.bin')
+	complete_msg('email.txt')
+	with open('email.txt', 'r') as fp:
 		print fp.read()
 	_clean_up()
 
 def _clean_up():
-	#os.remove('msg.bin')
 	os.remove('temp.file')
 	os.remove('encrypted_key.bin')
 	os.remove('signature.sha1')

@@ -49,6 +49,7 @@ def get_msg_to_verify(input_file):
 					break
 			count += 1
 	with open('message_verify.bin', 'wb') as fp:
+		content = content[:-1]
 		fp.write(content)
 
 def get_actual_msg_to_decrypt(input_file):
@@ -88,6 +89,7 @@ def clean_decryption():
 	os.remove('message_verify.bin')
 	os.remove('sign_verify.bin')
 	os.remove('actual_enc_message.bin')
+	os.remove('decrypted_key.txt')
 
 def format_incoming_message(message_file):
 	get_session_key(message_file)
