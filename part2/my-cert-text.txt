@@ -1,0 +1,43 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4135 (0x1027)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, ST=NC, L=Raleigh, O=NCSU, OU=CSC, CN=574/emailAddress=harfoush@cs.ncsu.edu
+        Validity
+            Not Before: Nov 26 16:07:39 2015 GMT
+            Not After : Nov 25 16:07:39 2016 GMT
+        Subject: C=US, ST=North Carolina, L=Raleigh, O=NCSU, OU=CNS, CN=lol/emailAddress=srmuchha@ncsu.edu
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:e1:ce:e6:78:2c:15:8a:cc:3f:2c:e0:69:98:5f:
+                    b1:3f:49:b4:72:46:49:67:5e:44:99:ea:7d:14:b3:
+                    eb:34:4b:ad:cd:35:63:8d:cc:ca:e4:7e:d4:03:3e:
+                    e6:f4:e0:35:33:00:3d:a4:eb:2f:ee:05:e9:00:a3:
+                    ad:fe:06:68:fc:12:50:f5:54:9c:b8:05:76:ba:c8:
+                    2c:76:ac:ff:51:e2:ea:85:cd:c7:67:19:c3:a1:3d:
+                    58:c2:c7:6c:54:6e:b8:b3:4c:c6:39:3d:8f:b3:fb:
+                    b7:a4:bc:8f:c8:0a:7f:fb:b6:4d:36:09:50:64:31:
+                    2a:bc:8c:8d:7b:81:1a:9d:23
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                F1:FC:B3:D5:79:0F:9C:23:82:1D:FE:8C:B5:34:A8:C9:91:DE:F3:45
+            X509v3 Authority Key Identifier: 
+                keyid:AE:85:18:73:51:F3:9C:38:22:0B:55:8C:52:2F:C2:95:06:F9:9D:EF
+
+    Signature Algorithm: sha256WithRSAEncryption
+         24:d8:e0:60:b6:3b:51:2f:81:d8:5b:22:0a:dd:ff:8b:fe:ca:
+         d0:34:08:7c:9e:81:b9:97:95:3c:b3:20:7a:da:e2:cc:7c:42:
+         ae:60:80:3b:ee:12:54:19:64:e8:3a:91:26:c8:73:f5:c1:e4:
+         1e:2d:d2:fb:7a:77:08:b0:43:f1:5c:b4:c3:6c:03:af:d0:24:
+         06:4a:b5:6f:f6:7e:78:e0:2f:f3:c7:54:53:40:16:a4:61:6f:
+         f4:21:9c:a9:2f:00:b8:bd:68:31:ea:fb:3f:b5:01:28:dc:aa:
+         c1:82:5b:21:b5:a1:b6:f4:18:b2:44:dd:0d:af:c4:cf:ae:b2:
+         97:e1

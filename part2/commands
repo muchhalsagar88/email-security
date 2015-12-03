@@ -1,0 +1,8 @@
+To print the copy of the certificate in textual form:
+openssl x509 -in cert.pem -noout -text
+
+To find the SHA1 fingerprint of the CA certificate:
+openssl x509 -in root-ca.crt -sha1 -noout -fingerprint
+
+To find the MD5 fingerprint of the CA certificate:
+openssl x509 -in root-ca.crt -md5 -noout -fingerprint
