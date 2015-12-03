@@ -11,11 +11,20 @@ For instance, if `key` is the password, then the file having the decoded secret 
 
 ## Part 2 - Generation of key pair and CSR
 ```
-openssl genrsa -out key.pem 1024 # generate the key pair
-openssl rsa -in key.pem -text -noout > out.txt # output in text format
-openssl req -new -sha256 -key key.pem -out custom.csr # create a CSR
-openssl req -noout -text -in custom.csr > opt_csr.txt  # output CSR in text format
-openssl rsa -in key.pem -des3 -out enc-key.pem # password protect pem file (password: sagar)
+# To generate the 1024-bit RSA key pair
+openssl genrsa -out key.pem 1024
+
+# To generate the output of key in text format
+openssl rsa -in key.pem -text -noout > out.txt
+
+# To generate a Certificate Signing Request (CSR)
+openssl req -new -sha256 -key key.pem -out custom.csr
+
+# To generate the output of CSR in text format
+openssl req -noout -text -in custom.csr > opt_csr.txt
+
+# To password protect the pem file
+openssl rsa -in key.pem -des3 -out enc-key.pem
 ```
 
 ## Part 3 - Sending and receiving encrypted emails
