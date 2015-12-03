@@ -297,7 +297,7 @@ def receive_mail(msg_file):
 	
 	decrypted_message = decrypt_message(session_key)
 	print "The decrypted message is:\n"+decrypted_message
-	#clean_decryption()
+	clean_decryption()
 
 def list_database():
 	print "The database currently contains "+str(len(index))+" certificates.\n"
