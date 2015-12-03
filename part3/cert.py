@@ -11,7 +11,6 @@ def fetch_certificate(key):
 	return _save_certificate(key, cert_url)
 	
 def _save_certificate(key, url):
-	print "Save cert called"
 	response = urllib2.urlopen(url)
 	html = response.read()
 	path_to_db = os.getcwd()+'/db/'
